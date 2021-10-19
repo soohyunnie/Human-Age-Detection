@@ -28,7 +28,10 @@ Since the distributions are not proportional, I binned the ages into 5 classes t
 
 # Deployment
 (picture place holder)
+
 I created a Flask app to deploy my model. To deploy this webpage, you need to make sure your Flask environment is activated. Then, in your terminal, run python app.py (make sure you are in the project directory).
 In the app, you submit a human face image and the image will display with the predicted age.
+
+I used the codes from https://roytuts.com/upload-and-display-image-using-python-flask/
 
 # Structure
