@@ -4,6 +4,8 @@
 # Business Understanding
 Image classification is one of the algorithms used in deep learning for machine learning. In this project, I will be detecting human age from face images. I have downloaded the dataset from https://susanqq.github.io/UTKFace/. The website has about 24,000 images of human faces that are ages 0-116. Detecting ages from face images can/is used in several cases, such as screening minors so that there won’t be any underage people buying alcohol/tobacco/etc., (will add more later). I have binned the ages in 5 categories: 0-20, 21-26, 27-40,  21-35, 36-50, 51+. I binned the ages in this way to make sure that I have balanced classes.
 
+Accuracy will be used to measure the model. I want the models to predict as many of the correct ages the model can get.
+
 # Ethical Issue on Face Recognition
 Face Recognition has been one of the popular software using deep learning. However, face recognition is one of the most controversial machine learning algorithms. I am going to talk a little about the ethical issues to show that this project will not be used for any such problematic reason.
 
