@@ -2,7 +2,7 @@
 ![image](https://www.internationalairportreview.com//wp-content/uploads/facial-recognition-3.jpg)
 
 # Business Understanding
-Image classification is one of the algorithms used in deep learning for machine learning. In this project, I will be detecting human age from face images. I have downloaded the dataset from https://susanqq.github.io/UTKFace/. The website has about 24,000 images of human faces that are ages 0-116. 
+Image classification is one of the algorithms used in deep learning for machine learning. In this project, I will be detecting human age from face images. I have downloaded the dataset from https://susanqq.github.io/UTKFace/. The website has about 24,000 images of human faces that are ages 0-116. The images are majority front facing faces with background and some body parts in the image. Hence, this limits the project on side views of the faces.
 
 Detecting ages from face images can be used in several cases:
 - Screening minors so that there won’t be any underage people buying alcohol/tobacco/etc.
@@ -51,7 +51,17 @@ The baseline model gave ~33% of accuracy on training data and ~21% on validation
 You can see that the model is predicting that the majority of the images are in age 27-35 (keep in mind that this model predicted only ~21% accurately).
 
 #### Final Model
+For the final model, we used pretrained model VGG16 with dense layers.
 
+The final model's accuracy score for training was ~62% and for validation was ~59%.
+
+The final model predicts the ages to be 0-20 more than other age classes.
+
+##### LIME 
+Using LIME, I plotted explanations of model's predictions.
+
+
+The red highlighted ares in the images are what the model used to predict the ages and the other colors are contradicting explanations for other classes.
 
 # Deployment
 ![2021-10-21 (3)](https://user-images.githubusercontent.com/87672665/138618340-13f2e15f-2809-4ff8-8d1d-546fddacdcb5.png)
@@ -65,11 +75,6 @@ I used the codes from https://roytuts.com/upload-and-display-image-using-python-
 ```
 ├── templates
 ├── Working_Notebook
-├── data  
-│   ├── Col_Descriptions.docx
-│   ├── Test Set Values.csv
-│   ├── Training Set Labels.csv
-│   └── Training Set Values.csv 
 ├── .gitignore
 ├── Data_Process.ipynb
 ├── Final_Notebook.ipynb
@@ -78,6 +83,5 @@ I used the codes from https://roytuts.com/upload-and-display-image-using-python-
 ├── baseline_model_cnn_models.ipynb
 ├── final_model.ipynb
 ├── pretrained_models.ipynb
-├── requirements.txt
 ├── Powerpoint_Human_Age_Detection.pdf
 ```

@@ -8,6 +8,8 @@ from numpy import asarray
 from keras.preprocessing import image
 from keras.preprocessing.image import ImageDataGenerator
 import numpy as np
+from mtcnn import MTCNN
+import matplotlib.pyplot as plt
  
 app = Flask(__name__)
 
@@ -17,7 +19,7 @@ app.secret_key = "secret_key"
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
  
-model = models.load_model('models/cnn_model3.h5')
+model = models.load_model('models/pretrained_model2.h5')
  
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
  
@@ -46,9 +48,28 @@ def upload():
         filename = secure_filename(file.filename)
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         img = image.load_img(UPLOAD_FOLDER+filename, target_size=(256, 256))
-        x = image.img_to_array(img)
-        x = np.expand_dims(x, axis=0)
+
+        pixels = plt.imread(UPLOAD_FOLDER+filename)
+        if len(pixels.shape) == 3 and pixels.shape[2] == 3:
+
+            detector = MTCNN()
+            
+            results = detector.detect_faces(pixels)
+            x1, y1, width, height = results[0]['box']
+            x2, y2 = x1 + width, y1 + height
+            face = pixels[y1:y2, x1:x2]
+            cropped_image = Image.fromarray(face)
+            cropped_image = cropped_image.resize((256,256))
+
+            x = image.img_to_array(cropped_image)
+            x = np.expand_dims(x, axis=0)
+            
+        else:
+            x = image.img_to_array(img)
+            x = np.expand_dims(x, axis=0)
+
         output = model.predict(x)
+
         if str(np.round(output[0][0], 1)) == '1.0':
             age = 'Ages 0-20'
         if str(np.round(output[0][1], 1)) == '1.0':
