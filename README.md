@@ -42,7 +42,6 @@ The distribution of the ages are not normally distributed. From the graph above,
 Since the distributions are not proportional, I binned the ages into 5 classes to make the number of images be similar between each class.
 
 # Result
-All the models were too big to upload in the github.
 #### Baseline Model
 For our baseline model, we used Dense Neural Networks with 5 layers including input and output layers.
 
