@@ -61,4 +61,23 @@ In the app, you submit a human face image and the image will display with the pr
 
 I used the codes from https://roytuts.com/upload-and-display-image-using-python-flask/
 
-# Structure
+# Repository Structure 
+```
+├── templates
+├── Working_Notebook
+├── data  
+│   ├── Col_Descriptions.docx
+│   ├── Test Set Values.csv
+│   ├── Training Set Labels.csv
+│   └── Training Set Values.csv 
+├── .gitignore
+├── Data_Process.ipynb
+├── Final_Notebook.ipynb
+├── README.md
+├── app.py
+├── baseline_model_cnn_models.ipynb
+├── final_model.ipynb
+├── pretrained_models.ipynb
+├── requirements.txt
+├── Powerpoint_Human_Age_Detection.pdf
+```
