@@ -1,0 +1,73 @@
+<html>
+<head>
+    <style>
+        .result {
+            display: inline-block;
+        }
+
+        .button {
+            display: inline-block;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #919691;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px #999;
+        }
+
+        .button:hover {background-color: #39473a}
+
+        .button:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+    </style>
+<title>Upload Image for Age Detection</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />        
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+<body>
+<p><h1 align="center" style="background-color:rgb(71, 86, 88); color: azure;">Upload Image for Age Detection</h1></p>
+<div class="container">
+<div class="row">
+    <h2>Select an image to upload</h2>
+    <form method="POST" action="/" enctype="multipart/form-data">
+        <dl>
+            <p style="border:black; border-style:solid;">
+                <input type="file" name="file">
+            </p>
+        </dl>
+        <p>
+            <input class='button' type="submit" value="Upload">
+        </p>
+    </form>
+    
+    <p>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul>
+                {% for message in messages %}
+                    <li style="border:3px; border-style:solid; border-color:#fa0202; padding: 1em;">{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+        
+    </p><br>
+
+    {% if filename %}
+        <div class='result' style="border:3px; border-style:solid; border-color:#17a512; padding: 1em; background-color:rgb(255, 255, 255);">
+            <h2>Result</h2>
+            <h4>{{output}}</h4> </br>
+            <img src="{{ url_for('display_image', filename=filename) }}">
+        </div>
+    {% endif %}
+
+</div>
+</div>
+</body>
+</html>
