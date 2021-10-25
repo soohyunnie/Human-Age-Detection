@@ -55,11 +55,16 @@ For the final model, we used pretrained model VGG16 with dense layers.
 
 The final model's accuracy score for training was ~62% and for validation was ~59%.
 
+![output15](https://user-images.githubusercontent.com/87672665/138733841-ae600e12-92bf-4823-9887-da5b3059e814.png)
+
 The final model predicts the ages to be 0-20 more than other age classes.
 
-##### LIME 
+#### LIME 
 Using LIME, I plotted explanations of model's predictions.
 
+![output12](https://user-images.githubusercontent.com/87672665/138733869-8376b8a1-8a08-4236-a35d-c8e6afae5e34.png)
+![output13](https://user-images.githubusercontent.com/87672665/138733880-51187a40-c766-4c19-ab66-5b18885e5280.png)
+![output14](https://user-images.githubusercontent.com/87672665/138733901-d6b154ae-cfcf-4276-99f2-eea54824898a.png)
 
 The red highlighted ares in the images are what the model used to predict the ages and the other colors are contradicting explanations for other classes.
 
