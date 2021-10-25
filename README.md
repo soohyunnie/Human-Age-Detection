@@ -29,9 +29,9 @@ From the website https://susanqq.github.io/UTKFace/, I downloaded the three zip 
 
 Before splitting the images into train, validation, and test, I cropped the faces from the images. I noticed that most of the images contain other parts that is not a face, such as body and background. By using MTCNN library, I cropped faces in all the images and saved the images in a new folder called cropped images.
 
-From the cropped images folder, I created another folder called split to randomly split the images into three different folders: train, validation, test. Now, we have processed our data for modeling.
-
 ![2021-10-24 (2)](https://user-images.githubusercontent.com/87672665/138618238-a9286764-776c-4a68-b661-486c63bae6c3.png)
+
+From the cropped images folder, I created another folder called split to randomly split the images into three different folders: train, validation, test. Now, we have processed our data for modeling.
 
 ![output5](https://user-images.githubusercontent.com/87672665/137989104-a2f31c28-a0d1-4a04-a967-72bc5232d937.png)
 
