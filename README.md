@@ -25,6 +25,8 @@ I have used https://www.nature.com/articles/d41586-020-03187-3 as a resource. Th
 
 
 # Data Process
+To see the summary of the project, please look at [Final_Notebook.ipynb](Final_Notebook.ipynb) notebook.
+
 From the website https://susanqq.github.io/UTKFace/, I downloaded the three zip folders named part1, part2, and part3. After unzipping the folders in a folder called ‘Human_Face_Regonition_Images’, I created another folder called images to combine all the images into one folder. 
 
 Before splitting the images into train, validation, and test, I cropped the faces from the images. I noticed that most of the images contain other parts that is not a face, such as body and background. By using MTCNN library, I cropped faces in all the images and saved the images in a new folder called cropped images.
