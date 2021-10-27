@@ -2,7 +2,7 @@
 ![image](https://www.internationalairportreview.com//wp-content/uploads/facial-recognition-3.jpg)
 
 # Business Understanding
-Image classification is one of the algorithms used in deep learning for machine learning. In this project, I will be detecting human age from face images. I have downloaded the dataset from https://susanqq.github.io/UTKFace/. The website has about 24,000 images of human faces that are ages 0-116. The images are majority front facing faces with background and some body parts in the image. Hence, this limits the project on side views of the faces.
+Image classification is one of the algorithms used in deep learning for machine learning. In this project, I will be detecting human age from face images. I have downloaded the dataset from https://susanqq.github.io/UTKFace/. The website has about 24,000 images of human faces that are ages 0-116. The images are majority front facing faces with background and some body parts in the image. Hence, this limits the project on side views of the faces since in real life, there will be various angles of human faces.
 
 Detecting ages from face images can be used in several cases:
 - Screening minors so that there won’t be any underage people buying alcohol/tobacco/etc.
@@ -21,8 +21,10 @@ Face Recognition has been one of the popular software using deep learning. Howev
 One of the major ethical issues is that many of these images are used without consent. This causes many problems since people do not like their faces used without their knowledge. Even when asked for consent, many people feel uncomfortable using their photos for research. The website I have downloaded this from have stated that they did not get consent. Thus, I will not be using the images other than just this project. 
 
 Another major ethical issue is using ethnicity in face recognition modeling. Many have wrongly used deep learning to discriminate against certain races. In this project, I have not used ethnicity as one of the feature predictions and just focused solely on age.
-I have used https://www.nature.com/articles/d41586-020-03187-3 as a resource. There are many other articles stating ethical issues on face recognition deep learning. Please search for more if interested.
 
+Although this project uses faces to detect age, this project is not doing face recognition but uses age feature from the image.
+
+I have used https://www.nature.com/articles/d41586-020-03187-3 as a resource. There are many other articles stating ethical issues on face recognition deep learning. Please search for more if interested.
 
 # Data Process
 To see the summary of the project, please look at [Final_Notebook.ipynb](Final_Notebook.ipynb) notebook.
