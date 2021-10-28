@@ -1,4 +1,4 @@
-# Human Age Ethnicity Detection
+# Human Age Detection
 ![image](https://www.internationalairportreview.com//wp-content/uploads/facial-recognition-3.jpg)
 
 # Business Understanding
